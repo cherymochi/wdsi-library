@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    font-family: Source Code Pro;
+
+    /* background-color: #F8F4E3; */
+    margin: auto;
+    padding: 0;
+}
+
+body{
+    background-color: #F8F4E3;
+    text-align: center;
+
+}
+
+.container{
+    width: 95%;
+    padding: 2%;
+    border: 2px solid #706c61;
+    border-radius: 10px;
+
+    background-color: #f5f5f5;
+
+    text-align: center;
+
+    margin-top: 20px;
+
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #E5446D;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #E5446D;
+    padding: 20px;
+}
+
+p{
+    font-size: 1.2rem;
+}
+
+.to_login{
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #E5446D;
+    cursor: pointer;
+
+    border: #706c61 solid 1px;
+    padding: 7px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+/* Style for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  /* Style for table headers */
+  th {
+    background-color: #f2f2f2;
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  /* Style for table cells */
+  td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+
+    width: 100px;
+  }
+  
+  /* Style for alternate rows */
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Style for images within cells */
+  td img {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Center align text within cells */
+  td {
+    text-align: center;
+  }
+  
+
+
