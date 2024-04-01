@@ -12,32 +12,42 @@
 <body>
 
     <header class="header">
-        <a href="#" class="logo"> JW Library</a>
+        <a href="HSindex.php" class="logo"> JW Library</a>
 
         <nav class="navbar">
-            <a href="#">Books</a>
+            <a href="HSdisplaybook.php">Books</a>
             <a href="#">About Us</a>
             <a href="#">Login</a>
-
         </nav>
+        <div>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </header>
+
+    <nav class="mobile">
+        <a href="#">Books</a>
+        <a href="#">About Us</a>
+        <a href="#">Login</a>
+    </nav>
     
     <div class="container">
+        <p class="welcome">Welcome to John Wolmer</p>
+        <p class="welcome">Library</p>
+        <img class="big-img" src="../assets/JW Library.png">
+
+        <a href="HSlogin.php">Click here to start your literary journey</a>
+            
+            
+        <hr>
+
         
 
-        <div class="landing">
+        <a href="HSdisplaybook.php"><button class="to_login">Enter as Guest</button></a>
 
-            <p class="welcome">Welcome to John Wolmer</p>
-            <p class="welcome">Library</p>
-            <img class="big-img" src="../assets/JW Library.png">
-
-            <h2>Build your library</h2>
-            <p>Login to access library.</p>
-            <a href="HSlogin.php"><button class="to_login">Admin</button></a>
-            <a href="HSlogin.php"><button class="to_login">Create Account</button></a>
-            
-            <a href="HSdisplaybook.php"><button class="to_login">Enter as Guest</button></a>
-        </div>
     </div>
 
     <div class="footer">
