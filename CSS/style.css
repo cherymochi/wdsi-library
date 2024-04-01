@@ -27,7 +27,7 @@ body {
     top:0;
     left: 0;
     width: 100%;
-    padding: 10px 65px;
+    padding: 20px 65px;
 
     z-index: 100;
     display: flex;
@@ -35,6 +35,8 @@ body {
     justify-content: space-between;
 
     background-color: transparent;
+
+    transition: .3s ease;
 }
 
 .logo {

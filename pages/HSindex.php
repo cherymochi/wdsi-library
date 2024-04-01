@@ -57,5 +57,7 @@
                 <br><br>
             </small>
     </div>
+
+    <script src="../script/script.js"></script>
 </body>
 </html>
