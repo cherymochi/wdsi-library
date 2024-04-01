@@ -25,6 +25,11 @@
 
                 <br><br>
                 <button type="submit" class="login_b">Login</button>
+
+                <small>
+                    Don't have an account?
+                    <a href="HScreate_acc.php">Register here!</a>
+                </small>
             </form>
         </div>
     </div>

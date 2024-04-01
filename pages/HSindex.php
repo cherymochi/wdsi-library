@@ -20,8 +20,9 @@
 
             <h2>Build your library</h2>
             <p>Login to access library.</p>
-            <a href="HSlogin.php"><button class="to_login">Login</button></a>
-            <a href="HScreate_acc.php"><button class="to_login">Create Account</button></a>
+            <a href="HSlogin.php"><button class="to_login">Admin</button></a>
+            <a href="HSlogin.php"><button class="to_login">Create Account</button></a>
+            
             <a href="HSdisplaybook.php"><button class="to_login">Enter as Guest</button></a>
         </div>
     </div>
