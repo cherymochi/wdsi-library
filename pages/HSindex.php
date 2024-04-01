@@ -5,18 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JWL - Index</title>
 
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
 
 
 </head>
 <body>
+
+    <header class="header">
+        <a href="#" class="logo"> JW Library</a>
+
+        <nav class="navbar">
+            <a href="#">Books</a>
+            <a href="#">About Us</a>
+            <a href="#">Login</a>
+
+        </nav>
+    </header>
     
     <div class="container">
-        <h1>John Wolmer Library</h1>
+        
 
-        <div class=" welcome content">
+        <div class="landing">
 
-            <br><br>
+            <p class="welcome">Welcome to John Wolmer</p>
+            <p class="welcome">Library</p>
+            <img class="big-img" src="../assets/JW Library.png">
 
             <h2>Build your library</h2>
             <p>Login to access library.</p>

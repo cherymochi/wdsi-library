@@ -1,99 +1,76 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+/* CSS Styliing
+Programmer : Nathalea Evans, 2101707
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 
 * {
-    font-family: Source Code Pro;
-
-    /* background-color: #F8F4E3; */
-    margin: auto;
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Poppins", sans-serif;
 }
 
-body{
-    background-color: #F8F4E3;
-    text-align: center;
-
+body {
+    min-height: 100vh;
+    max-width:max-content;
+    background: url(../assets/purple-stacked-waves.svg) no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-.container{
-    width: 95%;
-    padding: 2%;
-    border: 2px solid #706c61;
-    border-radius: 10px;
+.header {
+    position: fixed;
 
-    background-color: #f5f5f5;
-
-    text-align: center;
-
-    margin-top: 20px;
-
-}
-
-h1 {
-    font-size: 2.5rem;
-    color: #E5446D;
-    padding: 20px;
-}
-
-h2 {
-    font-size: 2rem;
-    color: #E5446D;
-    padding: 20px;
-}
-
-p{
-    font-size: 1.2rem;
-}
-
-.to_login{
-    margin-top: 20px;
-    font-size: 1.2rem;
-    color: #E5446D;
-    cursor: pointer;
-
-    border: #706c61 solid 1px;
-    padding: 7px;
-    display: inline-block;
-    border-radius: 5px;
-}
-
-/* Style for the table */
-table {
+    top:0;
+    left: 0;
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  /* Style for table headers */
-  th {
-    background-color: #f2f2f2;
-    border: 1px solid #dddddd;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  /* Style for table cells */
-  td {
-    border: 1px solid #dddddd;
-    padding: 8px;
+    padding: 10px 65px;
 
-    width: 100px;
-  }
-  
-  /* Style for alternate rows */
-  tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  /* Style for images within cells */
-  td img {
-    display: block;
-    margin: 0 auto;
-  }
-  
-  /* Center align text within cells */
-  td {
-    text-align: center;
-  }
-  
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
+    background-color: transparent;
+}
 
+.logo {
+    color: #fbe4d8;
+
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+
+}
+
+.navbar a {
+    position: relative;
+
+    color: #fbe4d8;
+
+    margin-left: 40px;
+
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fbe4d8;
+
+    transition: .3s ease-in-out;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
