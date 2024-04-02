@@ -8,17 +8,19 @@
     <link rel="stylesheet" href="../CSS/style.css">
 
 
+
 </head>
 <body>
 
-    <header class="header">
+<nav>
+    <div class="header">
         <a href="HSindex.php" class="logo"> JW Library</a>
 
-        <nav class="navbar">
+        <div class="navbar">
             <a href="HSdisplaybook.php">Books</a>
             <a href="#">About Us</a>
             <a href="#">Login</a>
-        </nav>
+        </div>
         <div>
             <button class="hamburger">
                 <span></span>
@@ -26,8 +28,8 @@
                 <span></span>
             </button>
         </div>
-    </header>
-
+    </div>
+</nav>
     <nav class="mobile">
         <a href="#">Books</a>
         <a href="#">About Us</a>
@@ -69,5 +71,6 @@
     </div>
 
     <script src="../script/script.js"></script>
+
 </body>
 </html>
