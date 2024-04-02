@@ -2,7 +2,7 @@
 
 // Nigaton Bar Animation
 window.addEventListener("scroll", function () {
-  var header = document.querySelector("header");
+  var header = document.querySelector(".header");
   if (this.window.scrollY > 0) {
     header.style.backgroundColor = "#2b124c";
   } else {
