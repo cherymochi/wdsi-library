@@ -10,7 +10,9 @@ Programmer : Nathalea Evans, 2101707
     padding: auto;
     box-sizing: border-box;
 
+    font-size: 2vw;
     font-family: 'Poppins', sans-serif;
+
 }
 
 body {
@@ -40,7 +42,7 @@ body {
 
     background-color: transparent;
 
-    transition: background-color .3s ease;
+    transition: background-color .3s ease-in;
 }
 
 .logo {
@@ -215,7 +217,7 @@ body {
 
     text-align: center;
 
-    background-color: #fbe4d8;
+    background-color: #f1e9e5;
 }
 
 .welcome {
@@ -243,6 +245,86 @@ a {
 
 }
 
-.to-lib {
-    font-family: 'Ephesis';
+.to-lib {   
+    font-size: 2.3vw;
+    text-decoration: underline;
+    font-family: 'Poppins', sans-serif;
+}
+
+hr {
+    margin-bottom:10px;
+    border: #190019 solid .1rem;
+}
+
+.container2 {
+    margin:  auto;
+    margin-top:  5%;
+
+    width: 90vw;
+    padding:  60px 20px;
+
+    position: relative;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    background-color: #f1e9e5;
+
+    display: block;
+    gap: 5px;
+}
+
+h2 {
+    font-size: 3.6vw;
+    font-family: 'Thasadith';
+}
+
+.join{
+    display: inline-grid;
+    position: relative;
+
+    width: 30vw;
+    max-width: min-content;
+
+    margin-bottom: 2%;
+}
+
+button {
+    color:#f1e9e4;
+    background-color: #522b5b;
+
+    font-size: 2vw;
+    font-family: 'Thasadith';
+
+    padding: 7px 10px;
+
+    outline:none;
+    border: 2px solid;
+    border-radius: 8px;
+
+    display: inline-grid;
+    cursor:pointer;
+    transition: all .3s ease-in;
+}
+
+button:hover {
+    text-decoration: underline;
+    background-color: #2b124c;
+
+}
+
+
+
+/* Footer */
+.footer {
+    bottom: 0;
+    padding: 1% ;
+
+    color: #f1e9e5;
+    text-align: center;
+}
+
+small {
+    font-size: 1.2vw;
 }
