@@ -59,9 +59,8 @@
         </a>
         <br><br>
         <small>
-            Already have an account?
-            <br>
-            <a href="HSlogin.php">Login Here</a> 
+            <p class="sml-lnk">Already have an account?</p> 
+            <a class="sml-lnk" href="HSlogin.php">Login Here</a> 
         </small>
         </div>
         
@@ -83,6 +82,7 @@
         </a>
 
     </div>
+    
     <!-- Footer -->
 
     <div class="footer">
