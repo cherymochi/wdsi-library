@@ -4,7 +4,7 @@
             $username = "";//I also don't know what to put here
             $password = "";
             
-            $username = $_POST["username"];
+            $username = $_POST["AdminID"];
             $password = $_POST["password"];
             
             if (empty($username) || empty($password)) {
