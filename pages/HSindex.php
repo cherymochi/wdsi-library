@@ -42,7 +42,7 @@
         <p class="welcome">Library</p>
         <img class="big-img" src="../assets/JW Library.png">
 
-        <a class="to-lib" href="HSlogin.php">Click here to start your literary journey</a>
+        <a class="to-lib" href="HSdisplaybook.php">Click here to start your literary journey</a>
             
     </div>
 
@@ -59,7 +59,9 @@
         </a>
         <br><br>
         <small>
-            <a href="HSlogin.php">Already have an account?</a> 
+            Already have an account?
+            <br>
+            <a href="HSlogin.php">Login Here</a> 
         </small>
         </div>
         
@@ -94,7 +96,8 @@
                 <br><br>
                 John Wolmer Library was created using HTML, CSS, JavaScript, and PHP
                 <br><br>
-                <a href="">Admin</a>
+                <a class="adm-lnk" href="">Admin</a>
+                <br>
                 --ˋˏ ༻❁༺ ˎˊ--
             </small>
     </div>

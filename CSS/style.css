@@ -239,12 +239,6 @@ img {
 
 }
 
-a {
-    color: #190019;
-    text-decoration: none;
-
-}
-
 .to-lib {   
     font-size: 2.3vw;
     text-decoration: underline;
@@ -323,8 +317,16 @@ button:hover {
 
     color: #f1e9e5;
     text-align: center;
+    font-family: 'Thasadith';
 }
 
-small {
+a {
+    color: #190019;
+    text-decoration: none;
+}
+
+.adm-lnk {
+    color: #f1e9e5;
     font-size: 1.2vw;
+    font-family: 'Thasadith';
 }
