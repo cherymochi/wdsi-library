@@ -45,18 +45,40 @@
         <form action="../includes/HSpatronvalidaton.php" autocomplete="off" method="post">
 
             <div class="form-content">
+
                 <label for="cardID">Library Card</label><br>
-                <input class="text-in" type="text" id="cardID" name="cardID" placeholder="Card ID">
+                <input class="text-in" type="text" id="cardID" name="cardID" placeholder="Card ID" value="<?php echo isset($cardID) ? $cardID : "" ?>">
+                <span class="error">
+                    <?php
+                        echo isset($errors['cardID'])
+                        ? $errors['cardID'] 
+                        : "";
+                    ?>
+                </span>
                 
                 <br><br>
 
                 <label>Name</label><br>
-                <input class="text-in name" type="text" id="fname" name="firstName" placeholder="Full Name">
+                <input class="text-in name" type="text" id="name" name="name" placeholder="Full Name" value="<?php echo isset($name) ? $name : "" ?>">
+                <span class="error">
+                    <?php
+                        echo isset($errors['name'])
+                        ? $errors['name'] 
+                        : "";
+                    ?>
+                </span>
                 
                 <br><br>
 
                 <label for="address"> Address</label><br>
-                <input class="text-in" type="text" placeholder="Full Address">
+                <input class="text-in" type="text"  id="address" name="address" placeholder="Full Address" value="<?php echo isset($address) ? $address : "" ?>">
+                <span class="error">
+                    <?php
+                        echo isset($errors['address'])
+                        ? $errors['address'] 
+                        : "";
+                    ?>
+                </span>
                 <br><br>
                 
             </div>

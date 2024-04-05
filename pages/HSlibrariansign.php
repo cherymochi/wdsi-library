@@ -51,16 +51,16 @@
                 <br><br>
 
                 <label>Name</label><br>
-                <input class="text-in" type="text" id="fname" name="firstName" placeholder="Full Name">
+                <input class="text-in" type="text" id="name" name="name" placeholder="Full Name">
                 
                 <br><br>
 
                 <label for="email"> Email</label><br>
-                <input class="text-in" type="email" placeholder="some_email@example.com">
+                <input class="text-in" type="email" placeholder="some_email@example.com" name="email">
                 <br><br>
 
                 <label for="password"> Password</label><br>
-                <input class="text-in" type="password" >
+                <input class="text-in" type="password" name="password">
                 <br><br>
 
                 <label for="role">Role</label>

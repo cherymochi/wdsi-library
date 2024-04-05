@@ -420,3 +420,9 @@ small {
     margin: 10px;
     font-weight: bold;
 }
+
+.error {
+    color: red;
+
+    font-family: 'Poppins';
+}
