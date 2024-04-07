@@ -55,20 +55,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Redirect back to HSaddbook2.php
         header("Location: HSaddbook2.php");
     } else {
-        // Redirect to HSaddbook2.php
-        header("Location: HSdisplaybook.php");
+        try {
+            // Get the database connection from another file
+            require_once "dbh.inc.php";
 
-        // Write form data into HSbookdata.txt file
-        $file = fopen("HSbookdata.txt", "a");
+            $query = "INSERT INTO librarian (ISBN, CallNo, SubjectArea, Quantity) VALUES (?, ?, ?, ?);";
 
-        // Add a new line of data to the file
-        $data = "$isbn,$number,$subject,$copies\n";
-        fwrite($file, $data);
+            $stmt = $pdo ->prepare($query);
 
-        // Close the file
-        fclose($file);
+            $stmt ->execute([$isbn,$number,$subject, $copies,]);
 
-        exit; // Exit after redirection to prevent further execution
+            // Clear Resources
+            $pdo = null;
+            $stmt = null;
+
+            // Redirect to HSdisplaybook.php
+            header("Location: ../pages/HSdisplaybook.php");
+
+            die();
+
+        } catch (PDOException $e) {
+            die("Query Failed: " . $e->getMessage());
+        }
     }
 }
 

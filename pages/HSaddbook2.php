@@ -10,7 +10,6 @@
 
 
 </head>
-<body>
 
 <body>
     <div class="header" id="head"></div>
@@ -49,22 +48,25 @@
 
     ?>
 
+    <!-- Footer -->
+
     <div class="footer">
         <br>
-        <hr/> 
+        <hr> 
 
             <small>
-                Created by Nathalea Evans - 2101707. 
+                Created by Nathalea Evans [2101707] and Kevon Simpson [2000206]. 
                 <br>
                 © All images are copyrighted by their respective owners
                 <br><br>
-                John Wolmer Library was created using HTML and PHP
+                John Wolmer Library was created using HTML, CSS, JavaScript, and PHP
                 <br><br>
+                <a class="adm-lnk" href="">Admin</a>
+                <br>
                 --ˋˏ ༻❁༺ ˎˊ--
-                <br><br>
-                <a href = "HSindex.php">❀Back to Index❀</a>
-                <br><br>
             </small>
     </div>
+
+    <script type="text/javascript" src="../script/script.js"></script>
 </body>
 </html>

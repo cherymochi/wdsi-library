@@ -60,27 +60,6 @@ function saveCoverToFile($file) {
     }
 }
 
-// Function to write data to HSbookdata.txt file
-function writeDataToFile($bookname, $author, $year, $coverFileName) {
-    $dataFilePath = "HSbookdata.txt";
-
-    // Open the file in append mode
-    $file = fopen($dataFilePath, "a");
-
-    if ($file) {
-        // Format the data as per your requirement
-        $data = "$bookname,$author,$year,$coverFileName,";
-
-        // Write data to the file
-        fwrite($file, $data);
-
-        // Close the file
-        fclose($file);
-    } else {
-        echo "<script>alert('ERROR: Unable to open data file.');</script>";
-    }
-}
-
 // Validate the data added into HSaddbook
 if($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -115,15 +94,27 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: HSaddbook.php");
     }
     else {
-        // Save cover file to uploads folder
-        $savedFileName = saveCoverToFile($cover);
-        
-        if ($savedFileName) {
-            // Write data to HSbookdata.txt file
-            writeDataToFile($bookname, $author, $year, $savedFileName);
-            
-            // Redirect to HSaddbook2.php after successful validation, file upload, and data write
-            redirectToHSaddbook2();
+        try {
+            // Get the database connection from another file
+            require_once "dbh.inc.php";
+
+            $query = "INSERT INTO book (Title, Author, Year, BookCover) VALUES (?, ?, ?, ?);";
+
+            $stmt = $pdo ->prepare($query);
+
+            $stmt ->execute([$bookname,$author,$year, $cover]);
+
+            // Clear Resources
+            $pdo = null;
+            $stmt = null;
+
+            // Redirect to HSaddbook2.php
+            header("Location: ../pages/HSaddbook2.php");
+
+            die();
+
+        } catch (PDOException $e) {
+            die("Query Failed: " . $e->getMessage());
         }
     }
 }

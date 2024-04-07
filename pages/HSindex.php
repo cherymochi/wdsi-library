@@ -90,7 +90,7 @@
         <hr> 
 
             <small>
-                Created by Nathalea Evans [2101707] and Kevon Simpson. 
+                Created by Nathalea Evans [2101707] and Kevon Simpson [2000206]. 
                 <br>
                 © All images are copyrighted by their respective owners
                 <br><br>
