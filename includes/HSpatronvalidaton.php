@@ -41,7 +41,7 @@
                 $pdo = null;
                 $stmt = null;
     
-                header("Location: ../pages/HSpatrondash.php");
+                header("Location: ../pages/HSdisplaybook.php");
     
                 die();
     
