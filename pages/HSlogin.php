@@ -83,8 +83,46 @@
     <?php
         // Check if form is submitted
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $username = "HSadmin";
-            $password = "HSpages123";
+            $username = $_POST["username"]; 
+            $pass = $_POST["password"]; 
+
+            try {
+                // Get database connection
+                require_once "../includes/dbh.inc.php";
+
+                // Query to fetch data from librarycard
+                $query = "SELECT * FROM librarycard WHERE username = :cardID";
+                $stmt = $pdo -> prepare($query);
+                $stmt -> bindParam(":cardID", $username);
+                $stmt -> execute();
+                $user = $stmt -> fetch(PDO::FETCH_ASSOC);
+
+                // If user is not found in librarycard, test against librarian
+                if (!$user) {
+                    $query = "SELECT * FROM librarian WHERE username = libID:";
+                    $stmt = $pdo->prepare($query);
+                    $stmt -> bindParam("libID", $username);
+                    $stmt -> execute();
+                    $librarian = $stmt -> fetch(PDO::FETCH_ASSOC);
+
+                    // If no match was found, display error message and return to login page
+                    if(!$user && !$librarian){
+                        header ("Location: HSlogin.php?error=Invalid%20Username%20or%20Password");
+                        exit();
+                    } else{
+                        // Set session variables for user or librarian
+                        if ($librarian) {
+                            $_SESSION["type"] = "Librarian";
+                            $_SESSION["id"] = $librarian["libID"];
+                        } else {
+                            $_SESSION["type"] = "User";
+                            $_SESSION["id"] = $user["patronID"];
+                        }
+                    }
+                }
+            } catch (PDOException $e) {
+                die("Query Failed: " . $e->getMessage());
+            }
 
             // Check if username and password are correct
             if ($_POST["username"] == $username && $_POST["password"] == $password) {

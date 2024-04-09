@@ -1,4 +1,6 @@
 <?php 
+// Start session
+session_start();
 
 // Function to redirect to HSaddbook2.php
 function redirectToHSaddbook2() {
@@ -73,48 +75,34 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<script>alert('ERROR :  Please fill in all fields');</script>";
 
         // Redirect to HSaddbook.php
-        header("Location: HSaddbook.php");
+        header("Location: ../pages/HSaddbook.php");
     }
     elseif (!preg_match("/^[a-zA-Z ]*$/", $bookname)) {
         echo "<script>alert('ERROR :  Only letters and white space allowed in Book Name');</script>";
 
         // Redirect to HSaddbook.php
-        header("Location: HSaddbook.php");
+        header("Location: ../pages/HSaddbook.php");
     }
     elseif (!preg_match("/^[a-zA-Z ]*$/", $author)) {
         echo "<script>alert('ERROR :  Only letters and white space allowed in Author Name');</script>";
 
         // Redirect to HSaddbook.php
-        header("Location: HSaddbook.php");
+        header("Location: ../pages/HSaddbook.php");
     }
     elseif (!preg_match("/^[0-9]*$/", $year)) {
         echo "<script>alert('ERROR :  Only numbers allowed in Year');</script>";
 
         // Redirect to HSaddbook.php
-        header("Location: HSaddbook.php");
+        header("Location: ../pages/HSaddbook.php");
     }
     else {
-        try {
-            // Get the database connection from another file
-            require_once "dbh.inc.php";
+        // Add data to session variables
+        $_SESSION['BookName'] = $bookname;
+        $_SESSION['AuthorName'] = $author;
+        $_SESSION['YearPublished'] = $year;
+        $_SESSION['CoverImage'] = $cover;
 
-            $query = "INSERT INTO book (Title, Author, Year, BookCover) VALUES (?, ?, ?, ?);";
-
-            $stmt = $pdo ->prepare($query);
-
-            $stmt ->execute([$bookname,$author,$year, $cover]);
-
-            // Clear Resources
-            $pdo = null;
-            $stmt = null;
-
-            // Redirect to HSaddbook2.php
-            header("Location: ../pages/HSaddbook2.php");
-
-            die();
-
-        } catch (PDOException $e) {
-            die("Query Failed: " . $e->getMessage());
-        }
+        // Redirect to page two
+        header("Location: ../pages/HSaddbook2.php");
     }
 }

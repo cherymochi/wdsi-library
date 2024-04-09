@@ -36,6 +36,21 @@
         <a href="#">About Us</a>
         <a href="HSlogin.php">Login</a>
     </nav>
+
+    <!-- Content -->
+    <div class="container">
+        <h2>Welcome</h2>
+        <hr>
+        <br><br>
+
+        <a href="HSaddbook.php">
+            <button class="button">Add a Book</button>
+        </a>
+
+        <a href="HSeditlib.php">
+            <button class="button">Edit Account</button>
+        </a>
+    </div>
     
 
     <!-- Footer -->

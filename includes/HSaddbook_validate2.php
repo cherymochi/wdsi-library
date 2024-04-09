@@ -1,5 +1,14 @@
 <?php
 
+// Start session
+session_start();
+
+// Get session data
+$bookname = $_SESSION['BookName'];
+$author = $_SESSION['AuthorName'];
+$year = $_SESSION['YearPublished'];
+$cover = $_SESSION['CoverImage'];
+
 // Function to validate ISBN
 function validateISBN($isbn) {
     // Check if ISBN is not empty and contains only numbers
@@ -53,17 +62,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<script>alert('ERROR :  Invalid data entered');</script>";
         
         // Redirect back to HSaddbook2.php
-        header("Location: HSaddbook2.php");
+        header("Location: ../pages/HSaddbook2.php");
     } else {
         try {
             // Get the database connection from another file
             require_once "dbh.inc.php";
 
-            $query = "INSERT INTO librarian (ISBN, CallNo, SubjectArea, Quantity) VALUES (?, ?, ?, ?);";
+            $query = "INSERT INTO librarian (ISBN,Title, Author, Year, BookCover, CallNo, SubjectArea, Quantity) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
 
             $stmt = $pdo ->prepare($query);
 
-            $stmt ->execute([$isbn,$number,$subject, $copies,]);
+            $stmt ->execute([$isbn,$bookname, $author, $year, $cover, $number,$subject, $copies,]);
 
             // Clear Resources
             $pdo = null;
