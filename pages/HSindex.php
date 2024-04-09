@@ -96,7 +96,7 @@
                 <br><br>
                 John Wolmer Library was created using HTML, CSS, JavaScript, and PHP
                 <br><br>
-                <a class="adm-lnk" href="">Admin</a>
+                <a class="adm-lnk" href="HSlogin.php">Admin</a> 
                 <br>
                 --ˋˏ ༻❁༺ ˎˊ--
             </small>
