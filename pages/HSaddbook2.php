@@ -12,6 +12,31 @@
 </head>
 
 <body>
+    <!-- Navigation Bar -->
+<nav>
+    <div class="header">
+        <a href="HSindex.php" class="logo"> JW Library</a>
+
+        <div class="navbar">
+            <a href="HSdisplaybook.php">Books</a>
+            <a href="#">About Us</a>
+            <a href="HSlogin.php">Login</a>
+        </div>
+        <div>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</nav>
+    <nav class="mobile">
+        <a href="HSdisplaybook.php">Books</a>
+        <a href="#">About Us</a>
+        <a href="HSlogin.php">Login</a>
+    </nav>
+    
     <div class="header" id="head"></div>
     <div class="container">
         <div class=" form content">
